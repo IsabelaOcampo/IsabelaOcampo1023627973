@@ -1,4 +1,3 @@
-﻿Console.WriteLine("Hola desde el CI/CD - Cambio 1");
-Console.WriteLine("Hola desde el CI/CD - Cambio 2");
-Console.WriteLine("Pipeline funcionando correctamente");
-Console.WriteLine("Isabela Ocampo - 1023627973");
+﻿Console.WriteLine("Hola desde el CI/CD - Cambio 3");
+Console.WriteLine("Aplicaciones y Servicios Web - ITM");
+Console.WriteLine("Taller evaluativo - CI/CD con GitHub Actions");
