@@ -1,6 +1,4 @@
-mkdir -p .github/workflows
-cat > .github/workflows/ci-cd.yml << 'EOF'
-name: CI/CD Pipeline - C# Console App
+name: CI/CD Pipeline
 
 on:
   push:
@@ -10,25 +8,18 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout del código
+      - name: Checkout del codigo
         uses: actions/checkout@v3
-
       - name: Configurar .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '9.0.x'
-
       - name: Restaurar dependencias
         run: dotnet restore
-
       - name: Compilar el proyecto
         run: dotnet build --no-restore --configuration Release
-
-      - name: Ejecutar la aplicación
+      - name: Ejecutar la aplicacion
         run: dotnet run --project MiApp.csproj
-EOF
-
 
 
